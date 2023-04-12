@@ -41,5 +41,5 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
-fruits_selected = streamlit.multiselect("What fruit would you like to add?", list(my_fruit_list.index))
-fruits_to_show = my_fruit_list.loc[fruits_selected]
+add_my_fruit = st.text_input('What fruit would you like to add?', 'jackfruit')
+st.write('Thanks for adding', add_my_fruit)
